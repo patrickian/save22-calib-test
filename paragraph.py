@@ -12,4 +12,4 @@ sentence =  sentence.split()
 for b in sentence:
 	if not b in dct:dct[b] = 1
 	else:dct[b] += 1
-print dct
+print sorted(dct.items(),key = lambda x : x[-1],reverse=True)
