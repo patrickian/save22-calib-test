@@ -1,14 +1,15 @@
 def add(fno,lno):
-        return int(fno) + int(lno)
+	#if not isinstance(fno,int):
+       	return fno + lno
 
 def subtract(fno,lno):
-        return int(fno) - int(lno)
+        return fno - lno
 
 def multiply(fno,lno):
-        return int(fno) * int(lno)
+        return fno * lno
 
 def divide(fno,lno):
-        return int(fno) / int(lno)
+        return fno / lno
 
 def operator(fno,lno,op):
         if op == '+': return add(fno,lno)
