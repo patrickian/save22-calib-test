@@ -12,13 +12,15 @@ def divide(fno,lno):
         return fno / lno
 
 def operator(fno,lno,op):
-        if op == '+': return add(fno,lno)
-        elif op == '-': return subtract(fno,lno)
-        elif op == '*': return multiply(fno,lno)
-        elif op == '/': return divide(fno,lno)
-        else: print 'Invalid operator.\n'
-        return None
-
+        #if op == '+': return add(fno,lno)
+        #elif op == '-': return subtract(fno,lno)
+        #elif op == '*': return multiply(fno,lno)
+        #elif op == '/': return divide(fno,lno)
+        #return None
+	functions= {'+':add,'-':subtract,'*':multiply,'/':divide}
+	func = functions.get(op,None)
+	if func: return func(fno,lno)
+	return None
 def input1():
 	return raw_input("Enter 1st number : ")
 
