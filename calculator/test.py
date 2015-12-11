@@ -25,5 +25,14 @@ class TestCalculator(unittest.TestCase):
 
 	def test_output(self):
 		self.assertEqual(calculator.output(1,2,'+',3),'1 + 2 = 3')
+
+	def test_op(self):
+		self.assertEqual(calculator.inputope(self.mock_input),1)
+	def test_input1(self):
+		self.assertEqual(calculator.input1(self.mock_input),1)
+	def test_input2(self):
+		self.assertEqual(calculator.input2(self.mock_input),1)
+	def mock_input(self,prompt):
+		return 1
 if __name__ == '__main__':
 	unittest.main()

@@ -21,14 +21,15 @@ def operator(fno,lno,op):
 	func = functions.get(op,None)
 	if func: return func(fno,lno)
 	return None
-def input1():
-	return raw_input("Enter 1st number : ")
+def input1(input = raw_input):
+	return input("Enter 1st number : ")
 
-def input2():
-        return raw_input("Enter 2nd number : ")
+def input2(input = raw_input):
+        return input("Enter 2nd number : ")
 
-def inputope():
-        return raw_input("Enter operation : ")
+def inputope(input = raw_input):
+	return input('Enter operation')
+        #return raw_input("Enter operation : ")
 
 def output(n1,n2,ope,ans):
 	return ('{} {} {} = {}').format(n1,ope,n2,ans)
