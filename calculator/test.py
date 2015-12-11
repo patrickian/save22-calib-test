@@ -21,8 +21,9 @@ class TestCalculator(unittest.TestCase):
                 self.assertEqual(calculator.operator(15,-10,'-'),25)
                 self.assertEqual(calculator.operator(16,2,'/'),8)
                 self.assertEqual(calculator.operator(7,-3,'*'),-21)
-		self.assertEqual(calculator.operator(1,2,'AB'),None)
+		self.assertEqual(calculator.operator(1,2,'aa'),None)
 
-
+	def test_output(self):
+		self.assertEqual(calculator.output(1,2,'+',3),'1 + 2 = 3')
 if __name__ == '__main__':
 	unittest.main()
