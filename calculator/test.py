@@ -36,5 +36,14 @@ class TestCalculator(unittest.TestCase):
 		return 1
 	def mock_op(self,prompt):
 		return '+'
+	def test_success(self):
+		n1 =calculator.input1(self.mock_input)
+	        n2 = calculator.input2(self.mock_input)
+       		ope = calculator.inputope(self.mock_op)
+        	ans = calculator.operator(n1,n2,ope)
+		final = calculator.output(n1,n2,ope,ans)
+		self.assertEqual(final,'1 + 1 = 2')
+
+
 if __name__ == '__main__':
 	unittest.main()
