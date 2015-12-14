@@ -28,18 +28,29 @@ def input2(input = raw_input):
         return input("Enter 2nd number : ")
 
 def inputope(input = raw_input):
-	return input('Enter operation')
+	return input('Enter operation : ')
         #return raw_input("Enter operation : ")
 
 def output(n1,n2,ope,ans):
 	return ('{} {} {} = {}').format(n1,ope,n2,ans)
 
 def main():
-        n1 = input1()
-	n2 = input2()
-	ope = inputope()
-	ans = operator(n1,n2,ope)
-	print output(n1,n2,ope,ans)
+	n1 = 0
+	n2 = 0
+	a= False
+	while not a:
+		try:
+        		n1 = int(input1())
+			n2 = int(input2())
+			a = True
+		except ValueError:
+			print 'invalid input.'
+	try:
+		ope = inputope()
+		ans = operator(n1,n2,ope)
+		print output(n1,n2,ope,ans)
+	except ZeroDivisionError:
+		print 'Cannot divide numbers to zero.'
 
 
 if __name__ == '__main__':
